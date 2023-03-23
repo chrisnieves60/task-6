@@ -11,14 +11,14 @@ const Books = () => {
     const [error, setError] = useState(false);
 
     const getData = async () => {
-        const url = 'https://api.matgargano.com/api/books';
-        setLoading(true);
-        setError(false);
+        const url = 'https://api.matgargano.com/api/books';         
+        setLoading(true); 
+        setError(false);   
         try {
             const request = await fetch(url);
             const response = await request.json();
-            setBooks(response);
-           
+            setBooks(response)
+            
         } catch(e) {
             setError('Error: ' + e.message);
         } finally {
